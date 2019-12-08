@@ -29,7 +29,6 @@
   "Run my solution to part one of the problem on the input in INPUT-ELEMENTS."
   (iter
     (for line in input-elements)
-    (print line)
     (summing (length line) into originals)
     (summing (length (read-from-string (ppcre:regex-replace-all "\\\\x[0-9a-f][0-9a-f]" line "-")))
              into parsed)
